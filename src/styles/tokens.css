@@ -1,0 +1,23 @@
+:root {
+  --primary: #8B1A1A;
+  --primary-light: #FFF0EE;
+  --accent: #FF6600;
+  --accent-light: #FFF3E0;
+  --success: #138808;
+  --success-light: #E8F5E9;
+  --danger: #C0392B;
+  --danger-light: #FDEDEC;
+  --warning: #E67E22;
+  --warning-light: #FEF9E7;
+  --bg: #F0EBE3;
+  --surface: #FFFFFF;
+  --border: #DDE1E7;
+  --text-1: #16171A;
+  --text-2: #52565E;
+  --text-3: #8A8F99;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+}
