@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import { useTranslation } from 'react-i18next';
 
@@ -69,8 +69,7 @@ export default function App() {
         duration={4000} 
         richColors 
       />
-      <Router>
-        <Routes>
+      <Routes>
           {/* Public Login Route */}
           <Route path="/" element={<LoginPage />} />
 
@@ -168,7 +167,6 @@ export default function App() {
           {/* Fallback to Login page */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </Router>
     </>
   );
 }

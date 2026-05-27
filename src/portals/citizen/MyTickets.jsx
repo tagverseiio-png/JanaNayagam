@@ -7,7 +7,6 @@ import {
   ThumbsUp, ThumbsDown, Send, Clock, ShieldAlert, RefreshCw, ChevronRight, ArrowLeft 
 } from 'lucide-react';
 import { MapContainer, TileLayer, CircleMarker } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
 import ErrorBoundary from '../../shared/components/ErrorBoundary';
 import { toast } from 'sonner';
 

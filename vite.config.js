@@ -8,12 +8,16 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+            if (id.includes('react-dom') || id.includes('react/')) {
               return 'vendor';
+            }
+            if (id.includes('react-router-dom')) {
+              return 'router';
             }
             if (id.includes('leaflet') || id.includes('react-leaflet')) {
               return 'map';

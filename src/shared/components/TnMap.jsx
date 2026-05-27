@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Tooltip, useMap, Marker } from 'react-leaflet';
 import L from 'leaflet';
 import { toast } from 'sonner';
-import 'leaflet/dist/leaflet.css';
 
 /* ─── 38 Tamil Nadu Districts Coordinate + Ticket Data ─────────────────── */
 const districts = [
