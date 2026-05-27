@@ -16,3 +16,490 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
+
+/* Noto Sans Tamil for Tamil Mode */
+.tamil-mode {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+}
+
+/* High-Contrast, Large-Font Elderly Mode */
+.elderly-mode {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+.elderly-mode p,
+.elderly-mode span,
+.elderly-mode a,
+.elderly-mode button,
+.elderly-mode td,
+.elderly-mode th,
+.elderly-mode label,
+.elderly-mode input,
+.elderly-mode textarea,
+.elderly-mode select,
+.elderly-mode h1,
+.elderly-mode h2,
+.elderly-mode h3,
+.elderly-mode h4 {
+  line-height: 1.8 !important;
+}
+
+.elderly-mode p,
+.elderly-mode span,
+.elderly-mode a,
+.elderly-mode td,
+.elderly-mode th,
+.elderly-mode label {
+  font-size: 1.15rem !important;
+}
+
+.elderly-mode h1 { font-size: 2.25rem !important; }
+.elderly-mode h2 { font-size: 1.85rem !important; }
+.elderly-mode h3 { font-size: 1.5rem !important; }
+.elderly-mode h4 { font-size: 1.25rem !important; }
+
+.elderly-mode button,
+.elderly-mode input,
+.elderly-mode textarea,
+.elderly-mode select {
+  padding: 12px 20px !important;
+  font-size: 1.15rem !important;
+}
+
+/* High Contrast: Black on White */
+.elderly-mode,
+.elderly-mode header,
+.elderly-mode aside,
+.elderly-mode main,
+.elderly-mode footer,
+.elderly-mode nav,
+.elderly-mode div,
+.elderly-mode section,
+.elderly-mode article {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.elderly-mode a,
+.elderly-mode span,
+.elderly-mode p,
+.elderly-mode h1,
+.elderly-mode h2,
+.elderly-mode h3,
+.elderly-mode h4,
+.elderly-mode label,
+.elderly-mode td,
+.elderly-mode th {
+  color: #000000 !important;
+  background-color: transparent !important;
+}
+
+.elderly-mode button {
+  border: 3px solid #000000 !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-weight: 900 !important;
+  border-radius: 6px !important;
+}
+
+.elderly-mode input,
+.elderly-mode textarea,
+.elderly-mode select {
+  border: 3px solid #000000 !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-radius: 6px !important;
+}
+
+/* Loading skeleton pulse */
+@keyframes skeleton-pulse {
+  0% { background-color: #e2e8f0; }
+  50% { background-color: #cbd5e1; }
+  100% { background-color: #e2e8f0; }
+}
+
+@keyframes dark-skeleton-pulse {
+  0% { background-color: #334155; }
+  50% { background-color: #1e293b; }
+  100% { background-color: #334155; }
+}
+
+.skeleton-box {
+  animation: skeleton-pulse 1.5s infinite ease-in-out;
+  border-radius: 0.375rem;
+  height: 1.25rem;
+  width: 100%;
+  display: inline-block;
+}
+
+.dark .skeleton-box {
+  animation: dark-skeleton-pulse 1.5s infinite ease-in-out;
+}
+
+/* ========== MOBILE RESPONSIVE UTILITIES ========== */
+
+/* StatCards: 2-column grid on mobile, 4 on md+ */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .stat-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.stat-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .stat-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.stat-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .stat-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .stat-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* TicketCard vertical stacking on mobile */
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Full-width form inputs on mobile */
+@media (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Compact content padding on mobile */
+  .portal-content {
+    padding: 1rem !important;
+  }
+}
+
+/* SVG map container sizing */
+.tn-map-container {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Pulse animation for live ticket markers on TnMap */
+@keyframes pulse-ring {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  70% { transform: scale(1.8); opacity: 0; }
+  100% { transform: scale(2); opacity: 0; }
+}
+@keyframes pulse-dot {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.pulse-marker {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.pulse-marker::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(244, 67, 54, 0.6);
+  animation: pulse-ring 2s infinite ease-out;
+}
+.pulse-marker::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #F44336;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+/* Print styles for Cabinet/Report print modals */
+@media print {
+  body > *:not(#print-root) { display: none !important; }
+  #print-root { display: block !important; }
+  .no-print { display: none !important; }
+  .print-table { width: 100%; border-collapse: collapse; }
+  .print-table th, .print-table td {
+    border: 1px solid #333;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 12px;
+  }
+  .print-table th { background: #003366 !important; color: white !important; -webkit-print-color-adjust: exact; }
+}
+
+/* Hide scrollbar but allow scroll */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Focus rings for accessibility */
+*:focus-visible {
+  outline: 2px solid #003366;
+  outline-offset: 2px;
+}
+.elderly-mode *:focus-visible {
+  outline: 4px solid #000000 !important;
+  outline-offset: 3px !important;
+}
+
+/* Smooth scrolling for the whole app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Leaflet custom overrides */
+.leaflet-container {
+  border-radius: 12px;
+  z-index: 1;
+}
+.leaflet-tooltip {
+  border-radius: 8px !important;
+  border: 1px solid #E0E0E0 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12) !important;
+  padding: 0 !important;
+  background: white !important;
+}
+
+/* ==========================================================================
+   GLOBAL MOBILE RESPONSIVE REBUILD (375px - 430px Mobile First)
+   ========================================================================== */
+
+/* 1. Global Layout & Spacing */
+body {
+  overflow-x: hidden !important;
+  width: 100vw;
+}
+
+.portal-content {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+@media (min-width: 768px) {
+  .portal-content {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* Spacing tokens */
+.gap-card-mobile { gap: 12px; }
+.gap-section-mobile { gap: 20px; }
+@media (min-width: 768px) {
+  .gap-card-mobile { gap: 16px; }
+  .gap-section-mobile { gap: 28px; }
+}
+
+/* Touch Targets & Min Sizes */
+button, 
+.btn-touch,
+a.nav-link-touch {
+  min-height: 44px;
+}
+
+input, 
+select, 
+textarea {
+  min-height: 48px;
+  font-size: 16px !important; /* Prevents auto zoom on iOS */
+}
+
+/* Ensure minimum font size across app is 13px */
+* {
+  font-size: max(13px, 1rem - 0.25rem); /* Fallback */
+}
+p, span, div, button, input, select, textarea, label {
+  font-size: max(13px, inherit);
+}
+
+/* Stat Cards Mobile/Desktop */
+.stat-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 12px !important;
+}
+@media (min-width: 768px) {
+  .stat-card-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+/* Ticket Cards Priorities left border */
+.ticket-border-critical { border-left: 4px solid #EF4444 !important; }
+.ticket-border-high { border-left: 4px solid #F59E0B !important; }
+.ticket-border-medium { border-left: 4px solid #3B82F6 !important; }
+.ticket-border-low { border-left: 4px solid #10B981 !important; }
+
+/* Table responsive cards on mobile */
+@media (max-width: 767px) {
+  .responsive-table-wrapper table {
+    display: none !important;
+  }
+  .responsive-table-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+}
+@media (min-width: 768px) {
+  .responsive-table-cards {
+    display: none !important;
+  }
+}
+
+/* Loading States & Skeletons */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.skeleton-pulse {
+  animation: pulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background-color: #E8E8E8 !important;
+  border-radius: 6px;
+}
+
+/* Bottom Sheet Rules */
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px 20px 0 0;
+  background-color: #FFFFFF;
+  padding: 20px 16px;
+  max-height: 85vh;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 -8px 24px rgba(0,0,0,0.15);
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}
+.bottom-sheet-drag-handle {
+  width: 36px;
+  height: 4px;
+  background-color: #DDE1E7;
+  border-radius: 2px;
+  margin: 0 auto 16px auto;
+}
+
+/* Elderly Mode (A+) Overrides */
+body.elderly-mode * {
+  font-size: calc(100% + 4px) !important;
+}
+body.elderly-mode button, 
+body.elderly-mode .btn-touch,
+body.elderly-mode a.nav-link-touch {
+  min-height: 56px !important;
+  min-width: 56px !important;
+}
+body.elderly-mode input, 
+body.elderly-mode select, 
+body.elderly-mode textarea {
+  min-height: 56px !important;
+  font-size: 18px !important;
+}
+body.elderly-mode .bottom-sheet-drag-handle {
+  width: 48px !important;
+  height: 6px !important;
+}
+body.elderly-mode .fixed-bottom-nav {
+  height: 76px !important;
+}
+body.elderly-mode .fixed-bottom-nav svg {
+  width: 26px !important;
+  height: 26px !important;
+}
+body.elderly-mode .fixed-bottom-nav span {
+  font-size: 14px !important;
+}
+
+/* Reduced motion and High contrast for Elderly Mode */
+body.elderly-mode {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  transition: none !important;
+}
+body.elderly-mode * {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+body.elderly-mode .bg-white,
+body.elderly-mode div,
+body.elderly-mode section,
+body.elderly-mode main,
+body.elderly-mode header,
+body.elderly-mode nav,
+body.elderly-mode footer,
+body.elderly-mode form {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  border-color: #000000 !important;
+}
+body.elderly-mode button,
+body.elderly-mode input,
+body.elderly-mode select,
+body.elderly-mode textarea {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+body.elderly-mode .border-b,
+body.elderly-mode .border-t,
+body.elderly-mode .border-r,
+body.elderly-mode .border-l,
+body.elderly-mode .border {
+  border: 1px solid #000000 !important;
+}
+
+/* SLA Breached Shake Warning Animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+  20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+.animate-shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+
+
