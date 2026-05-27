@@ -152,7 +152,7 @@ export default function SecretaryDashboard() {
             exit={{ opacity: 0, height: 0 }}
             className="bg-rose-50 border border-rose-200 dark:bg-rose-950/20 dark:border-rose-900/50 p-4.5 rounded-3xl flex items-start gap-3 shadow-inner"
           >
-            <ShieldAlert className="w-5.5 h-5.5 text-rose-600 shrink-0 mt-0.5 animate-pulse" />
+            <ShieldAlert className="w-[22px] h-[22px] text-rose-600 shrink-0 mt-0.5 animate-pulse" />
             <div className="space-y-1">
               <span className="text-[10px] font-black text-rose-700 dark:text-rose-400 uppercase tracking-widest block">
                 Statewide Systemic Failure Alert

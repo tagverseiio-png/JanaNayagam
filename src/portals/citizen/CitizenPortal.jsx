@@ -183,7 +183,7 @@ export default function CitizenPortal() {
               isMapActive ? 'text-[#8B1A1A]' : 'text-slate-400'
             }`}
           >
-            <Home className="w-5.5 h-5.5" />
+            <Home className="w-[22px] h-[22px]" />
             <span className="text-[10px] font-black uppercase mt-1 tracking-wide">
               {tLabel('Home', 'முகப்பு')}
             </span>
@@ -196,7 +196,7 @@ export default function CitizenPortal() {
               isSubmitActive ? 'text-[#8B1A1A]' : 'text-slate-400'
             }`}
           >
-            <AlertTriangle className="w-5.5 h-5.5" />
+            <AlertTriangle className="w-[22px] h-[22px]" />
             <span className="text-[10px] font-black uppercase mt-1 tracking-wide">
               {tLabel('File Issue', 'புகார்')}
             </span>
@@ -212,7 +212,7 @@ export default function CitizenPortal() {
                   : 'bg-[#8B1A1A] border-4 border-[#F0EBE3] text-white/80'
               }`}
             >
-              <MapPin className="w-5.5 h-5.5 animate-pulse" />
+              <MapPin className="w-[22px] h-[22px] animate-pulse" />
             </button>
             <span className={`text-[10px] font-black uppercase mt-1 tracking-wider ${
               isTrackActive ? 'text-[#8B1A1A]' : 'text-slate-400'
@@ -228,7 +228,7 @@ export default function CitizenPortal() {
               isFeedActive ? 'text-[#8B1A1A]' : 'text-slate-400'
             }`}
           >
-            <Users className="w-5.5 h-5.5" />
+            <Users className="w-[22px] h-[22px]" />
             <span className="text-[10px] font-black uppercase mt-1 tracking-wide">
               {tLabel('Feed', 'ஊட்டம்')}
             </span>
@@ -241,7 +241,7 @@ export default function CitizenPortal() {
               isProfileActive ? 'text-[#8B1A1A]' : 'text-slate-400'
             }`}
           >
-            <User className="w-5.5 h-5.5" />
+            <User className="w-[22px] h-[22px]" />
             <span className="text-[10px] font-black uppercase mt-1 tracking-wide">
               {tLabel('Profile', 'சுயவிவரம்')}
             </span>

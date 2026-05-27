@@ -85,78 +85,78 @@ export default function PortalLayout({ children, sidebarLinks, roleLabel }) {
     switch (cleanRole) {
       case 'vao':
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: '/vao', icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('Raise', 'புகார்'), path: '/vao/raise', icon: <AlertTriangle className="w-5.5 h-5.5" /> },
-          { label: tLabel('Village', 'கிராமம்'), path: '/vao/tickets', icon: <FileText className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/vao/profile', icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: '/vao', icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Raise', 'புகார்'), path: '/vao/raise', icon: <AlertTriangle className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Village', 'கிராமம்'), path: '/vao/tickets', icon: <FileText className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/vao/profile', icon: <User className="w-[22px] h-[22px]" /> }
         ];
       case 'ward_officer':
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: '/ward-officer', icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('Inbox', 'உள்பெட்டி'), path: '/ward-officer/inbox?filter=open', icon: <Inbox className="w-5.5 h-5.5" />, badge: ticketCount },
-          { label: tLabel('Escalated', 'மேல்முறையீடு'), path: '/ward-officer/inbox?filter=escalated', icon: <AlertTriangle className="w-5.5 h-5.5" />, badge: escalatedCount },
-          { label: tLabel('Resolved', 'தீர்வு'), path: '/ward-officer/inbox?filter=resolved', icon: <CheckCircle className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/ward-officer/profile', icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: '/ward-officer', icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Inbox', 'உள்பெட்டி'), path: '/ward-officer/inbox?filter=open', icon: <Inbox className="w-[22px] h-[22px]" />, badge: ticketCount },
+          { label: tLabel('Escalated', 'மேல்முறையீடு'), path: '/ward-officer/inbox?filter=escalated', icon: <AlertTriangle className="w-[22px] h-[22px]" />, badge: escalatedCount },
+          { label: tLabel('Resolved', 'தீர்வு'), path: '/ward-officer/inbox?filter=resolved', icon: <CheckCircle className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/ward-officer/profile', icon: <User className="w-[22px] h-[22px]" /> }
         ];
       case 'bdo':
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: '/bdo', icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('Tickets', 'புகார்கள்'), path: '/bdo/tickets', icon: <FileText className="w-5.5 h-5.5" /> },
-          { label: tLabel('Analytics', 'விவரம்'), path: '/bdo/analytics', icon: <TrendingUp className="w-5.5 h-5.5" /> },
-          { label: tLabel('Escalate', 'மேல்முறையீடு'), path: '/bdo/escalate', icon: <ArrowUpRight className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/bdo/profile', icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: '/bdo', icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Tickets', 'புகார்கள்'), path: '/bdo/tickets', icon: <FileText className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Analytics', 'விவரம்'), path: '/bdo/analytics', icon: <TrendingUp className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Escalate', 'மேல்முறையீடு'), path: '/bdo/escalate', icon: <ArrowUpRight className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/bdo/profile', icon: <User className="w-[22px] h-[22px]" /> }
         ];
       case 'dro':
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: '/dro', icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('Revenue', 'வருவாய்'), path: '/dro/tickets', icon: <FileText className="w-5.5 h-5.5" /> },
-          { label: tLabel('Flag', 'கொடி'), path: '/dro/flagged', icon: <ShieldAlert className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/dro/profile', icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: '/dro', icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Revenue', 'வருவாய்'), path: '/dro/tickets', icon: <FileText className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Flag', 'கொடி'), path: '/dro/flagged', icon: <ShieldAlert className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/dro/profile', icon: <User className="w-[22px] h-[22px]" /> }
         ];
       case 'mla':
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: '/mla', icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('Constituency', 'தொகுதி'), path: '/mla/tickets', icon: <FileText className="w-5.5 h-5.5" /> },
-          { label: tLabel('Raise', 'புகார்'), path: '/mla/raise', icon: <AlertTriangle className="w-5.5 h-5.5" /> },
-          { label: tLabel('Analytics', 'விவரம்'), path: '/mla/analytics', icon: <TrendingUp className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/mla/profile', icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: '/mla', icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Constituency', 'தொகுதி'), path: '/mla/tickets', icon: <FileText className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Raise', 'புகார்'), path: '/mla/raise', icon: <AlertTriangle className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Analytics', 'விவரம்'), path: '/mla/analytics', icon: <TrendingUp className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/mla/profile', icon: <User className="w-[22px] h-[22px]" /> }
         ];
       case 'collector':
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: '/collector', icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('Tickets', 'புகார்கள்'), path: '/collector/tickets', icon: <FileText className="w-5.5 h-5.5" /> },
-          { label: tLabel('Wards', 'வார்டுகள்'), path: '/collector/wards', icon: <Settings className="w-5.5 h-5.5" /> },
-          { label: tLabel('Reports', 'அறிக்கைகள்'), path: '/collector/performance', icon: <TrendingUp className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/collector/profile', icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: '/collector', icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Tickets', 'புகார்கள்'), path: '/collector/tickets', icon: <FileText className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Wards', 'வார்டுகள்'), path: '/collector/wards', icon: <Settings className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Reports', 'அறிக்கைகள்'), path: '/collector/performance', icon: <TrendingUp className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/collector/profile', icon: <User className="w-[22px] h-[22px]" /> }
         ];
       case 'dept_secretary':
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: '/dept-secretary', icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('Tickets', 'புகார்கள்'), path: '/dept-secretary/tickets', icon: <FileText className="w-5.5 h-5.5" /> },
-          { label: tLabel('Reports', 'அறிக்கைகள்'), path: '/dept-secretary/reports', icon: <BarChart2 className="w-5.5 h-5.5" /> },
-          { label: tLabel('Bulk', 'மொத்தம்'), path: '/dept-secretary/bulk', icon: <Zap className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/dept-secretary/profile', icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: '/dept-secretary', icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Tickets', 'புகார்கள்'), path: '/dept-secretary/tickets', icon: <FileText className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Reports', 'அறிக்கைகள்'), path: '/dept-secretary/reports', icon: <BarChart2 className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Bulk', 'மொத்தம்'), path: '/dept-secretary/bulk', icon: <Zap className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/dept-secretary/profile', icon: <User className="w-[22px] h-[22px]" /> }
         ];
       case 'minister':
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: '/minister', icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('View', 'பார்வை'), path: '/minister/tickets', icon: <FileText className="w-5.5 h-5.5" /> },
-          { label: tLabel('Crisis', 'நெருக்கடி'), path: '/minister/crisis', icon: <AlertTriangle className="w-5.5 h-5.5" /> },
-          { label: tLabel('CM', 'முதல்வர்'), path: '/minister/directives', icon: <Shield className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/minister/profile', icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: '/minister', icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('View', 'பார்வை'), path: '/minister/tickets', icon: <FileText className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Crisis', 'நெருக்கடி'), path: '/minister/crisis', icon: <AlertTriangle className="w-[22px] h-[22px]" /> },
+          { label: tLabel('CM', 'முதல்வர்'), path: '/minister/directives', icon: <Shield className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/minister/profile', icon: <User className="w-[22px] h-[22px]" /> }
         ];
       case 'cm':
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: '/cm', icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('State', 'மாநிலம்'), path: '/cm/state', icon: <Globe className="w-5.5 h-5.5" /> },
-          { label: tLabel('Emergency', 'அவசரம்'), path: '/cm/emergency', icon: <AlertTriangle className="w-5.5 h-5.5" /> },
-          { label: tLabel('Escalations', 'மேல்முறை'), path: '/cm/escalations', icon: <ArrowUpRight className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/cm/profile', icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: '/cm', icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('State', 'மாநிலம்'), path: '/cm/state', icon: <Globe className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Emergency', 'அவசரம்'), path: '/cm/emergency', icon: <AlertTriangle className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Escalations', 'மேல்முறை'), path: '/cm/escalations', icon: <ArrowUpRight className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: '/cm/profile', icon: <User className="w-[22px] h-[22px]" /> }
         ];
       default:
         return [
-          { label: tLabel('Home', 'முகப்பு'), path: `/${role.replace('_', '-')}`, icon: <Home className="w-5.5 h-5.5" /> },
-          { label: tLabel('Profile', 'சுயவிவரம்'), path: `/${role.replace('_', '-')}/profile`, icon: <User className="w-5.5 h-5.5" /> }
+          { label: tLabel('Home', 'முகப்பு'), path: `/${role.replace('_', '-')}`, icon: <Home className="w-[22px] h-[22px]" /> },
+          { label: tLabel('Profile', 'சுயவிவரம்'), path: `/${role.replace('_', '-')}/profile`, icon: <User className="w-[22px] h-[22px]" /> }
         ];
     }
   };
