@@ -37,13 +37,6 @@ export default function App() {
     checkMobile();
     window.addEventListener('resize', checkMobile);
 
-    // 2. Restore Elderly Mode on load
-    const isElderly = localStorage.getItem('jn_elderly_mode') === 'true';
-    if (isElderly) {
-      document.body.classList.add('elderly-mode');
-    } else {
-      document.body.classList.remove('elderly-mode');
-    }
 
     // 3. Set default title
     if (window.location.pathname === '/') {

@@ -92,15 +92,6 @@ body.tamil-mode {
   font-family: 'Noto Sans Tamil', sans-serif;
 }
 
-body.elderly-mode {
-  font-size: 19px;
-  line-height: 1.9;
-}
-
-body.elderly-mode * {
-  animation: none !important;
-  transition: none !important;
-}
 
 ::-webkit-scrollbar {
   width: 4px;

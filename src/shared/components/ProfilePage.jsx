@@ -8,9 +8,6 @@ export default function ProfilePage() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
-  const [elderlyMode, setElderlyMode] = useState(
-    localStorage.getItem('jn_elderly_mode') === 'true'
-  );
 
   const isTa = i18n.language === 'ta';
   const tLabel = (en, ta) => isTa ? ta : en;
@@ -76,18 +73,7 @@ export default function ProfilePage() {
     toast.success(lng === 'en' ? 'Switched to English' : 'தமிழுக்கு மாற்றப்பட்டது');
   };
 
-  const handleElderlyToggle = () => {
-    const nextVal = !elderlyMode;
-    setElderlyMode(nextVal);
-    localStorage.setItem('jn_elderly_mode', String(nextVal));
-    if (nextVal) {
-      document.body.classList.add('elderly-mode');
-      toast.success('Elderly Mode (A+) Activated');
-    } else {
-      document.body.classList.remove('elderly-mode');
-      toast.success('Elderly Mode Deactivated');
-    }
-  };
+
 
   const handleLogout = () => {
     localStorage.clear();
@@ -175,27 +161,7 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        {/* Row: Elderly Mode */}
-        <div className="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800/50">
-          <div className="flex flex-col">
-            <span className="text-sm font-extrabold text-slate-800 dark:text-slate-200">
-              {tLabel('Elderly Mode (A+)', 'முதியோர் பயன்முறை (A+)')}
-            </span>
-            <span className="text-[11px] text-slate-400 font-bold">
-              {tLabel('Larger text & high contrast', 'பெரிய உரை & அதிக மாறுபாடு')}
-            </span>
-          </div>
-          
-          <label className="relative inline-flex items-center cursor-pointer">
-            <input
-              type="checkbox"
-              checked={elderlyMode}
-              onChange={handleElderlyToggle}
-              className="sr-only peer"
-            />
-            <div className="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#8B1A1A]"></div>
-          </label>
-        </div>
+
 
         {/* Row: Location Settings */}
         <button

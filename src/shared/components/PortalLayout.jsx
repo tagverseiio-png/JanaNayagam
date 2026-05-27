@@ -16,9 +16,6 @@ export default function PortalLayout({ children, sidebarLinks, roleLabel }) {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [elderlyMode, setElderlyMode] = useState(
-    localStorage.getItem('jn_elderly_mode') === 'true'
-  );
 
   const isTa = i18n.language === 'ta';
   const tLabel = (en, ta) => isTa ? ta : en;
@@ -42,26 +39,9 @@ export default function PortalLayout({ children, sidebarLinks, roleLabel }) {
       document.title = 'JanaNayagam';
     }
 
-    const isElderly = localStorage.getItem('jn_elderly_mode') === 'true';
-    if (isElderly) {
-      document.body.classList.add('elderly-mode');
-    } else {
-      document.body.classList.remove('elderly-mode');
-    }
+
   }, [roleLabel]);
 
-  const toggleElderlyMode = () => {
-    const nextVal = !elderlyMode;
-    setElderlyMode(nextVal);
-    localStorage.setItem('jn_elderly_mode', String(nextVal));
-    if (nextVal) {
-      document.body.classList.add('elderly-mode');
-      toast.success('Elderly Mode (A+) Activated');
-    } else {
-      document.body.classList.remove('elderly-mode');
-      toast.success('Elderly Mode Deactivated');
-    }
-  };
 
   const handleLogout = () => {
     localStorage.clear();
@@ -279,19 +259,6 @@ export default function PortalLayout({ children, sidebarLinks, roleLabel }) {
                 </div>
               </div>
 
-              {/* Elderly Mode switch */}
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-500 font-bold">{tLabel('Elderly Mode (A+)', 'முதியோர் பயன்முறை')}</span>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={elderlyMode}
-                    onChange={toggleElderlyMode}
-                    className="sr-only peer"
-                  />
-                  <div className="w-9 h-5 bg-slate-200 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#8B1A1A]"></div>
-                </label>
-              </div>
 
               <hr className="border-slate-100 dark:border-slate-800" />
 
@@ -363,16 +330,7 @@ export default function PortalLayout({ children, sidebarLinks, roleLabel }) {
 
             <div className="flex gap-2">
               <LanguageToggle />
-              <button
-                onClick={toggleElderlyMode}
-                className={`px-3 py-1.5 rounded-xl text-xs font-black border transition-all ${
-                  elderlyMode 
-                    ? 'bg-black border-black text-white'
-                    : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700'
-                }`}
-              >
-                A+
-              </button>
+
             </div>
 
             <button

@@ -292,8 +292,6 @@ export default function TicketInbox() {
                   const isLeftSwipe = distance > minSwipeDistance;
                   const isRightSwipe = distance < -minSwipeDistance;
 
-                  const isElderly = localStorage.getItem('jn_elderly_mode') === 'true';
-                  if (isElderly) return;
 
                   if (isLeftSwipe && ticket.status !== 'resolved') {
                     setActiveTicket(ticket);
